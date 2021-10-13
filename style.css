@@ -1,0 +1,251 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Noto Serif', serif;
+}
+
+nav{
+    background: #5434af;
+    height: 120px;
+    width: 100%;
+    top: 0;
+}
+
+label.logo img{ /* mudar */
+    height: 120px;
+    padding-left: 30vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+nav ul{
+    float: right;
+    margin-right: 30vh;
+}
+
+nav ul li{
+    display: inline-block; /* ajusta pra inline */
+    line-height: 120px;
+    margin-inline: 25px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 18px;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover{
+    background: white;
+    color: #5434af;
+    transition: 0.3s;
+    border: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.checkbtn{ /* bar sm */
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 120px;
+    margin-right: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 1024px){
+
+    label.logo img{
+        height: 100px;
+        padding-left: 15px;
+        margin-top: 10px;
+    }
+
+    nav ul{
+        float: right;
+        margin-right: 10vh;
+    }
+
+    nav ul li a{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 425px){ /* Mostrar nav-bar em small device */
+
+    label.logo img{
+        height: 110px;
+        padding-left: 25px;
+        top: 0;
+    }
+
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #351f77;
+        left: -100%;
+        top: 120px;
+    }
+
+    .checkbtn{ /* bar sm */
+        font-size: 30px;
+        color: white;
+        float: right;
+        line-height: 120px;
+        margin-right: 15px;
+        cursor: pointer;
+        display: list-item;
+        top: 120px;
+        left: 0;
+        text-align: center;
+        transition: all 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        line-height: 30px;
+        text-align: center;
+        margin: 50px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    nav ul li a:hover{
+        background: #2d1a64;
+        color: white;
+        background-size: 15px;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+        transition: 0.5s;
+    }
+
+}
+
+.container {
+    display: absolute;
+    height: auto;
+    width: 80vw;
+    margin: 15px 0 15px 10vw;
+    padding: 15px;
+  }
+
+@media (max-width: 768px){
+    .container{
+        display: flex;
+        background: violet;
+        height: auto;
+        width: 100vw;
+        margin: 0;
+    }
+}
+  
+footer{
+    background: #111;
+    color: white;
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    position: absolute; /* trava o footer em baixo */
+    vertical-align: baseline; /* trava o footer em baixo */
+    left: 0;
+    right: 0;
+}
+
+footer .footer-content{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column; /* alinha todos os item como se fossem coluna */
+}
+
+footer .footer-content h1{
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 2rem;
+    padding-bottom: 20px;
+}
+
+footer .footer-content p{
+    color: rgba(255, 255, 255, 0.857);
+    font-size: 15px;
+    line-height: 1.5rem;
+    font-weight: lighter;
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+}
+
+footer ul li{
+    padding: 30px;
+}
+
+footer ul i{
+    color: white;
+    font-size: 30px;
+    padding: 5px;
+}
+
+footer ul i:hover{
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    border-radius: 100%;
+}
+
+footer .footer-botton{
+    background-color: #000;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+} 
+
+footer .footer-botton{
+    font-size: 14px;
+    word-spacing: 3px;
+    text-transform: capitalize;
+}
+
+footer .footer-botton span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 15px;
+}
+
+section .card-content{
+    text-align: center;
+}
+
+section .card-slide{
+    display: inline-table;
+    background: burlywood;
+    width: 400px;
+    padding: 15px;
+    margin-inline: 20px;
+    margin-bottom: 15px;
+    border-style: groove;
+}
+
+section .card-slide .img-card{
+    width: 400px;
+    height: 250px;
+}
