@@ -1,14 +1,13 @@
-function barOpen(){
+function barOpener(){
 
-    let mediaQuery = window.matchMedia('(max-width: 425px)')
-    let ulOpen = document.getElementById('nav ul')
+    let open = document.querySelector('ul#nav-ul')
 
-    if(mediaQuery.matches){
-        if(ulOpen.style.right == '100vh'){
-            ulOpen.style.width = '0px'
-        }else{
-            ulOpen.style.width = '100vh' 
-        }
+    if(open.classList.contains('ul')){
+        open.classList.remove('ul')
+        open.classList.add('opener')
+    }else{
+        open.classList.remove('opener')
+        open.classList.add('ul')
     }
 
 }
