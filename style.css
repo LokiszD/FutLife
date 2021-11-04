@@ -24,6 +24,10 @@ label.logo img{ /* mudar */
     padding-bottom: 10px;
 }
 
+label i{
+    font-size: 0;
+}
+
 nav ul{
     float: right;
     margin-right: 30vh;
@@ -51,17 +55,7 @@ nav ul li a:hover{
     border-radius: 10px;
 }
 
-.checkbtn{ /* bar sm */
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 120px;
-    margin-right: 15px;
-    cursor: pointer;
-    display: none;
-}
-
-#check{
+nav .bar-opener i{
     display: none;
 }
 
@@ -85,10 +79,39 @@ nav ul li a:hover{
 
 @media (max-width: 425px){ /* Mostrar nav-bar em small device */
 
+    nav .bar-opener{
+        display: flex;
+        right: 0;
+    }
+
+    nav .bar-opener i{
+        display: block;
+        font-size: 25px;
+        color: white;
+    }
+
+    section div.card-slide{
+        width: 250px;
+    }
+
+    section div.card-slide .img-card{
+        width: 200px;
+        height: 100px;
+    }
+
     label.logo img{
         height: 110px;
         padding-left: 25px;
         top: 0;
+    }
+
+    label i{
+        display: inline-block;
+        float: right;
+        cursor: pointer;
+        font-size: 50px;
+        color: #ffffff;
+        margin: 30px 20px;
     }
 
     nav ul{
@@ -96,28 +119,14 @@ nav ul li a:hover{
         width: 100%;
         height: 100vh;
         background: #351f77;
-        left: -100%;
-        top: 120px;
-    }
-
-    .checkbtn{ /* bar sm */
-        font-size: 30px;
-        color: white;
-        float: right;
-        line-height: 120px;
-        margin-right: 15px;
-        cursor: pointer;
-        display: list-item;
-        top: 120px;
-        left: 0;
-        text-align: center;
-        transition: all 0.5s;
+        top: 0;
+        right: 0;
     }
 
     nav ul li{
         display: block;
         line-height: 30px;
-        text-align: center;
+        text-align: right;
         margin: 50px;
     }
 
@@ -131,30 +140,20 @@ nav ul li a:hover{
         background-size: 15px;
     }
 
-    #check:checked ~ ul{
-        left: 0;
-        transition: 0.5s;
-    }
-
 }
 
 .container {
-    display: absolute;
     height: auto;
-    width: 80vw;
-    margin: 15px 0 15px 10vw;
+    margin: 10px 200px 10px 200px;
     padding: 15px;
-  }
+}
 
 @media (max-width: 768px){
     .container{
-        display: flex;
-        background: violet;
-        height: auto;
-        width: 100vw;
-        margin: 0;
+        margin: auto;
     }
 }
+
   
 footer{
     background: #111;
@@ -164,15 +163,24 @@ footer{
     padding-top: 40px;
     position: absolute; /* trava o footer em baixo */
     vertical-align: baseline; /* trava o footer em baixo */
+    z-index: 999;
     left: 0;
     right: 0;
 }
 
 footer .footer-content{ 
     display: flex;
+    width: 700px;
+    margin: auto;
     align-items: center;
     justify-content: space-between;
     flex-direction: column; /* alinha todos os item como se fossem coluna */
+}
+
+@media (max-width: 425px){
+    footer .footer-content{ 
+        width: 300px;
+    }
 }
 
 footer .footer-content h1{
